@@ -1,0 +1,128 @@
+// all custom styles for the site
+
+
+// ---------- button ----------
+
+.btn {
+  @include transition;
+  display: inline-block;
+  width: 100%;
+  padding: .5em 1.5em;
+  border: 1px solid $sw-red;
+  font-weight: 400;
+  color: $sw-red;
+  text-align: center;
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $sw-red;
+    text-decoration: none;
+  }
+  &--red {
+    background-color: $sw-red;
+    color: $white !important;
+    border: 0;
+    &:hover,
+    &:focus {
+      background-color: $sw-dark-red;
+    }
+  }
+  &--red-trans {
+    background-color: $sw-red-75;
+    color: $white !important;
+    border: 0;
+    &:hover,
+    &:focus {
+      background-color: $sw-red;
+    }
+  }
+  &--white {
+    background-color: $white;
+    border: 0;
+    &:hover,
+    &:focus {
+      background-color: $sw-red;
+    }
+  }
+  * + & { margin-top: 1em; }
+}
+
+.subtle-btn {
+  display: inline-block;
+  font-size: .867em;
+  padding-top: .2em;
+  padding-bottom: .2em;
+  &__icon {
+    display: inline-block;
+    width: 22px;
+    height: 9px;
+    vertical-align: middle;
+    margin-left: .5em;
+    @include transition;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &:hover .subtle-btn__icon {
+    margin-left: 1.25em;
+  }
+}
+
+.bg-color { background-color: $sw-lighter-beige; }
+
+.img-block {
+  &__image {
+    float: left;
+    width: 50%;
+  }
+  @include clearfix;
+}
+
+.swiss-promo {
+  background-color: $sw-light-beige;
+  background-image: url("../img/bg/swiss-promo-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  @include border-bottom;
+  @include box-shadow;
+  .row__column {
+    margin: 2.986em 2.2em;
+    @include bp( large ){
+      width: 48%;
+    }
+  }
+  h3 {
+    line-height: 1.33;
+  }
+  @include bp(large){
+    background-image: url("../img/bg/swiss-promo.jpg");
+  }
+}
+
+.line-title {
+  overflow: hidden;
+  text-align: center;
+  span {
+    position: relative;
+    display: inline-block;
+    &:before,
+    &:after {
+      // line either side of title effect
+      content: '';
+      position: absolute;
+      top: 50%;
+      height: 1px;
+      width: 300%;
+      background-color: $sw-red-33;
+    }
+    &:before {
+      right: 100%;
+      margin-right: 1em;
+    }
+    &:after {
+      left: 100%;
+      margin-left: 1em;
+    }
+  }
+}

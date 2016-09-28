@@ -1,0 +1,12 @@
+# Site settings
+title: Winter In Switzerland
+core-nav-title: Swiss Winter
+description: >
+  There isn’t a country in Europe that gets our wanderlust going like Switzerland does. We've brought together a Swiss A-team to show you why we love it so much.
+baseurl: "/swiss" # the subpath of your site, e.g. /blog/
+url: "https://www.secretescapes.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+exclude: [node_modules, gulpfile.js, package.json, bower_components, bower.json, README.md]
+keep_files: [three-sixty]

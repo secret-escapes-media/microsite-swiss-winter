@@ -1,0 +1,146 @@
+// styles for the competition page
+
+
+.competition {
+  text-align: center;
+  &__title {
+    font-size: 1.467em;
+    font-weight: 300;
+    margin-bottom: 1em;
+    line-height: 1.2;
+  }
+  &__iframe-wrap {
+    height: 33.33em;
+    max-width: $xlarge;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $white;
+    -webkit-overflow-scrolling:touch;
+    overflow:auto;
+    background-image: url("../img/icon/loading.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    @include bp( large ){
+      height: 26.667em;
+      overflow: visible;
+    }
+    .touch & {
+      overflow: auto;
+      -webkit-overflow-scrolling:touch;
+    }
+  }
+  &__iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.competition-intro {
+  position: relative;
+  padding-top: 3.333em;
+  padding-bottom: 0;
+  color: $white;
+  text-align: center;
+  overflow: hidden;
+  @include border-bottom;
+  &__wrap {
+    padding-top: 10em;
+    padding-bottom: 10em;
+    text-align: center;
+    text-shadow: 0px 5px 30px #083457;
+    z-index: $z-content-upper;
+  }
+  &__title {
+    font-size: 2.488em;
+    font-family: $title-font-family;
+    font-weight: 300;
+    letter-spacing: .2em;
+    color: $white !important;
+    word-break: break-word;
+    @include bp( large ){
+      font-size: 3.533em;
+    }
+  }
+  &__content {
+    max-width: $medium;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+  }
+}
+
+.logo-block {
+  max-width: $medium;
+  margin-left: auto;
+  margin-right: auto;
+  &__row {
+    text-align: center;
+  }
+  &__logo {
+    width: 33.33%;
+    margin-left: auto;
+    margin-right: auto;
+    & img {
+      width: 100%;
+    }
+  }
+  &__logo + &__logo {
+    padding-top: $margin;
+  }
+  @include bp( medium ){
+    &__row {
+      display: table;
+    }
+    &__logo {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+    &__logo + &__logo {
+      padding-top: 0;
+    }
+  }
+}
+
+.background-video {
+  display: none;
+  @include bp( large ){
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-background;
+    display: block;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    .csstransforms.csstransforms3d & {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  &__fallback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-background-lower;
+    background: url("../img/bg/competition.jpg") no-repeat;
+    background-size: cover;
+    background-position: 50% 25%;
+    background-color: $sw-black;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $z-content;
+    background-color: rgba(8,52,87,.15);
+  }
+}
