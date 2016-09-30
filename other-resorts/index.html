@@ -1,0 +1,54 @@
+---
+layout:     default
+title:      Other Resorts
+class:      other-resorts
+nav-order:  6
+intro:      >
+            Switzerland’s chilled-out side can catch people by surprise. With all of the adventurous goings on it’s a wonder that anyone stops to catch their breath. Relaxing doesn’t mean you’ll have time to be bored, there are too many festivals and spas for that to happen. The Swiss idea of taking it easy is more about filling your days with whatever you fancy.
+---
+
+
+
+<section class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
+
+  <div class="banner__wrap row row--padding">
+    <h1 class="banner__title">{{ page.title }}</h1>
+  </div>
+
+  <div class="banner__description">
+    <div class="row row--padding align-center">
+      <p class="lead-paragraph">{{ page.intro }}</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+<div class="offers row row--padding align-center">
+  <div class="section--padding-top">
+    <h2 class="line-title">
+      <span>
+        Resort Offers
+      </span>
+    </h2>
+    <p class="lead-paragraph">Kick-start your Swiss summer break with this incredible offer. And we’re giving you an extra £25 off, so there’s really no excuse not to start packing.</p>
+  </div>
+  <div class="section--padding-top">
+    <!-- shows offers in page category -->
+    {% assign offers = site.data.offers | sort: 'price' %}
+    {% for offer in offers %}
+      {% include offer-block.html %}
+    {% endfor %}
+  </div>
+</div>
+
+
+
+{% include swiss-promo.html %}
+
+
+{% include offers-section.html %}
+
+
+

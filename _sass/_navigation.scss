@@ -1,36 +1,75 @@
 // site header and navigation styles
+$site-header-offset: 115px;
 
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $z-overlay-upper;
+}
 
-// -------- Main navigation ( core site style ) --------
+// -------- Main navigation --------
 
 .site-header {
   color: $white;
   font-family: $core-font-family;
-  background-color: $black;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  background-color: $black-75;
+  padding: 1.15em 0;
+  height: 70px;
+  overflow: hidden;
   text-align: center;
-  @include bp( large ) {
-    text-align: left;
+  @include bp( xlarge ) {
+    padding: .6em 2em;
+  }
+  &__offset:before { display: block; content: ""; width: 100%; height: $site-header-offset; }
+}
+
+.site-header__logo {
+  margin-right: 0;
+  padding: 0;
+  @include bp( xlarge ) {
+    float: left;
+    border-right: 1px solid rgba(255,255,255,0.15);
+    margin-right: 15px;
+    padding: 0.8em 15px 0.8em 0;
+  }
+
+  img {
+    width: 220px;
+    @include bp( xlarge ) {
+      width: 175px;
+    }
+  }
+}
+
+.site-header__logo--partner {
+  display: none;
+  @include bp( xlarge ) {
+    display: block;
+    float: right;
+    width: auto;
+    padding: 0.5em 0;
+    height: 48px;
   }
 }
 
 .site-header__nav {
   position: fixed;
+  float: none;
   top: 0;
   left: -75%;
   z-index: $z-overlay-upper;
   width: 75%;
   height: 100%;
-  background-color: $se-dark-grey-85;
+  background-color: $black-75;
   transition: left $transition-time ease;
   text-align: left;
-  @include bp( large ) {
+  @include bp( xlarge ) {
     position: static;
+    float: left;
     width: auto;
     height: auto;
     padding: 0;
-    margin-top: 1em;
     background-color: transparent;
   }
   @include bp-vertical {
@@ -39,15 +78,15 @@
 }
 
 .site-header__nav-list {
-  border-bottom: 1px solid $black;
-  @include bp( large ) {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  @include bp( xlarge ) {
     border-bottom: 0;
   }
 }
 
 .site-header__nav-item {
-  border-top: 1px solid $black;
-  @include bp( large ) {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  @include bp( xlarge ) {
     display: inline-block;
     padding-right: 1em;
     border-top: 0;
@@ -64,45 +103,29 @@
   text-transform: uppercase;
   &:hover {
     color: $se-orange;
-    background-color: $se-dark-grey-85;
+    background-color: $black-85;
     text-decoration: none;
   }
   &--current { color: $se-orange; }
-  @include bp( large ) {
-    padding: 0;
+  @include bp( xlarge ) {
+    padding: 1.3em 0;
     font-size: .833em;
     &:hover { background-color: transparent; }
-  }
-}
-
-.site-header__logo {
-  width: 146px;
-  @include bp( medium ) {
-    width: 220px;
-  }
-}
-
-.site-header__logo--partner {
-  display: none;
-  @include bp( large ) {
-    display: block;
-    float: right;
-    width: 140px;
   }
 }
 
 
 // -------- Mobile navigation --------
 
-$icon-height: 20px;
+$icon-height: 21px;
 .mobile-icon {
   height: $icon-height;
   width: 25px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto 20px;
+  background-size: auto $icon-height;
   cursor: pointer;
-  @include bp( large ) {
+  @include bp( xlarge ) {
     display: none;
   }
 }
@@ -121,6 +144,7 @@ $icon-height: 20px;
   margin: 1em;
   margin-top: 1.5em;
   background-image: url( "../img/icon/close.png" );
+  border-top: 0;
   .svg & { background-image: url( "../img/icon/close.svg" ); }
 }
 
@@ -134,7 +158,7 @@ $icon-height: 20px;
   padding-bottom: 1em;
   background-color: $black-5;
   text-align: center;
-  @include bp( large ) {
+  @include bp( xlarge ) {
     display: none;
   }
   @include bp-vertical {
@@ -146,7 +170,7 @@ $icon-height: 20px;
     vertical-align: middle;
     padding-top: .833em;
     padding-bottom: .833em;
-    @include bp( large ) {
+    @include bp( xlarge ) {
       display: none;
     }
   }
@@ -155,34 +179,35 @@ $icon-height: 20px;
 // -------- Microsite navigation --------
 
 .microsite-nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: auto;
   z-index: $z-overlay;
-  color: $sw-darker-grey;
-  font-size: .9em;
-  text-transform: uppercase;
-  letter-spacing: .144em;
   text-align: center;
+  overflow: hidden;
+  height: 45px;
+
   background-color: $white-5;
 
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0.9+0,0.8+100,0.5+100 */
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjkiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#80ffffff',GradientType=0 ); /* IE6-8 */
+  background: -moz-linear-gradient(top,  rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.5) 100%);
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.5) 100%);
+  background: linear-gradient(to bottom,  rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6ffffff', endColorstr='#80ffffff',GradientType=0 );
 }
 
 .microsite-nav__list {
+  height: 100%;
+  position: relative;
   text-align: center;
   white-space: nowrap;
   overflow: scroll;
   overflow-x: auto;
   overflow-y: hidden;
+  @include bp( xlarge ) {
+    display: inline-block;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    overflow: visible;
+  }
   .touch & {
     padding-right: 66px;
     &:before {
@@ -209,85 +234,52 @@ $icon-height: 20px;
         display: none;
       }
     }
-    display: inline-block;
     width: 100%;
+    display: inline-block;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     overflow: visible;
   }
 }
 
-
-// ############ might need to tidy up the hover effect and section menu
-
 .microsite-nav__item {
-  position: relative;
-  @include transition;
   display: inline-block;
   text-align: center;
-  border-bottom: 3px solid $white;
-  &--current,
-  &:hover {
+  flex-grow: 1;
+  &:first-child { border-left: 0; }
+  &--current a {
     color: $sw-red;
-    border-color: $sw-red;
-  }
-  &--current {
-    font-weight: 700;
-  }
-  > .section-nav { display: none }
-  @include bp( xlarge ){
-    width: 20%;
-    > .section-nav {
-      display: none;
-      text-transform: uppercase;
-      position: absolute;
-      width: 100%;
-      background-color: $sw-red;
-      color: $white;
-      font-weight: normal;
-      overflow: hidden;
-      @include transition;
-      .nav__link:hover {
-        background-color: $sw-dark-red;
-      }
-      .nav__item + .nav__item {
-        border-top: 1px solid $sw-dark-red;
-      }
-      .csstransforms.csstransforms3d & {
-        display: block;
-        transform: scaleY(0);
-        transform-origin: top center;
-      }
-    }
-    &:hover > .section-nav {
-      display: block;
-      .csstransforms.csstransforms3d & {
-        transform: scaleY(1);
-      }
-      .touch & {
-        display: none;
-      }
-    }
   }
 }
 
-.microsite-nav__link,
-.microsite-nav .nav__link {
-  transition: background-color $transition-time ease;
+.microsite-nav__link {
+  @include transition;
   display: block;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding: 0.5em 1.44em;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  padding: 12px 12px;
+  height: 100%;
+  position: relative;
+  color: $sw-dark-grey;
+  &:after {
+    @include transition;
+    content: "";
+    height: 2px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    background-color: $sw-red;
+  }
   &:hover {
+    color: $sw-darker-grey;
     text-decoration: none;
-  }
-  @include bp( large ){
-    padding-left: 2.8em;
-    padding-right: 2.8em;
-    padding-top: 0.833em;
-    padding-bottom: 0.833em;
-  }
-  @include bp( xlarge ){
-    padding-left: 0;
-    padding-right: 0;
+    &:after { bottom: 0; }
   }
 }
+
+
+

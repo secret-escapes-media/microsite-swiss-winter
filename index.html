@@ -1,24 +1,26 @@
 ---
-layout: layout
-title: Overview
+layout: default
+title: Switzerland
 class: overview
 nav-order: 1
+intro:      >
+            Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna.
 ---
 
 
-<section class="overview-intro">
-  <div class="row row--padding overview-intro__title">
-    <h1 class="text-title"><span>Summer In</span> Switzer<wbr>land</h1>
-    <img class="image-title js-svg-swap" src="{{site.baseurl}}/img/content/site-title.png" alt="Sumer In Switzerland">
+
+<section class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
+
+  <div class="banner__wrap row row--padding">
+    <h1 class="banner__title">{{ page.title }}</h1>
   </div>
-  <div class="overview-intro__description">
-    <div class="row row--padding">
-      <div class="overview-intro__description-wrap">
-        <p class="align-center">There isn’t a country in Europe that can get our wanderlust going like Switzerland does. We've brought together a Swiss A-team to show you why we love it so much. From leading Instagrammers and local mountain bikers, to award-winning Swiss photographers, we’ve gone to every corner of the country and packed everything together to create a guide like no other.</p>
-        <a class="subtle-btn" href="{{site.baseurl}}/about">Meet Our Experts <img class="subtle-btn__icon js-svg-swap" src="{{site.baseurl}}/img/icon/long-arrow-right.png" alt=""></a>
-      </div>
+
+  <div class="banner__description">
+    <div class="row row--padding align-center">
+      <p class="lead-paragraph">{{ page.intro }}</p>
     </div>
   </div>
+
 </section>
 
 <section class="bg-color bg-color-correct">
@@ -44,17 +46,23 @@ nav-order: 1
 <section class="section--padding-top overview-nav overlap--large">
   <div class="row row--padding">
     <!-- gets all content sections -->
-    {% assign site-sections = site.html_pages | sort:"nav-order" %}
-    {% for section in site-sections %}
-      {% if section.layout == "section" %}
-        <div class="overview-nav__item row__column overlap__image" style="background-image: url('{{site.baseurl}}/img/bg/overview-nav/{{section.class}}.jpg');"><a class="overview-nav__link" href="{{site.baseurl}}{{ section.url }}"><span class="overview-nav__wrap">{{section.title}}</span></a></div>
+    {% assign resorts = site.pages | sort:"nav-order" %}
+    {% for resort in resorts %}
+    {% if resort.layout == 'resort' %}
+      <div class="overview-nav__item row__column overlap__image" style="background-image: url('{{site.baseurl}}/img/bg/bg-{{resort.class}}.jpg');">
+        <a class="overview-nav__link" href="{{site.baseurl}}{{ resort.url }}">
+          <span class="overview-nav__wrap">{{resort.title}}</span>
+        </a>
+      </div>
       {% endif %}
     {% endfor %}
   </div>
 </section>
 
+
+
 {% include swiss-promo.html %}
 
 
+{% include offer-section.html %}
 
-{% include section-offers.html %}

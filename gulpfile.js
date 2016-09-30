@@ -34,7 +34,7 @@ gulp.task('concatScripts', function(){
   return gulp.src([
     './js/modernizr-custom.js',
     './bower_components/jquery/dist/jquery.min.js',
-    './bower_components/FitText.js/jquery.fittext.js',
+    './bower_components/simpleWeather/jquery.simpleWeather.min.js',
     './js/script.js'])
   .pipe(concat('scripts.js'))
   .pipe(uglify())
@@ -49,7 +49,7 @@ gulp.task('htmlMinify', function() {
     collapseWhitespace: true,
     removeComments: true
   }))
-  .pipe(gulp.dest('./_site'))
+  .pipe(gulp.dest('./_site'));
 });
 
 // css autoprefix & min
@@ -60,7 +60,7 @@ gulp.task('optimiseCss', function() {
     cascade: false
   }))
   .pipe(cssmin())
-  .pipe(gulp.dest('./_site'))
+  .pipe(gulp.dest('./_site'));
 });
 
 // compress images

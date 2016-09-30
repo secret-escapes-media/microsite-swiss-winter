@@ -1,32 +1,5 @@
 <div class="site-footer__padding"></div>
 <footer class="site-footer">
-  <div class="row row--padding row--columns-6-6-gutters row--columns-vertical-align row--column-padding">
-    <div class="row__column site-footer__nav">
-      {% assign site-sections = site.html_pages | sort:"nav-order" %}
-      {% for section in site-sections %}
-        {% if section.layout == "section" %}
-        <div class="site-footer__nav-section">
-          <h4 class="site-footer__nav-title"><a href="{{site.baseurl}}{{ section.url }}">{{section.title}}</a></h4>
-          {% include section-nav-list.html context=section.url amount="all-levels" %}
-        </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-    <div class="row__column">
-      <div class="about-footer row">
-        <div class="about-footer__image row__column">
-          <a href="{{site.baseurl}}/about">
-            <div class="bg-image-ratio bg-image-ratio--1-1" style="background-image: url('{{site.baseurl}}/img/content/gabriel.jpg');"></div>
-          </a>
-        </div>
-        <div class="row__column about-footer__text">
-          <h3 class="about-footer__title">About Our Experts</h3>
-          <p class="about-footer__description">We've brought together a Swiss A-team to show you why we love it so much. From leading Instagrammers and local mountain bikers to award-winning Swiss photographers.</p>
-          <a class="subtle-btn about-footer__btn" href="{{site.baseurl}}/about">Meet Our Experts <img class="subtle-btn__icon js-svg-swap" src="{{site.baseurl}}/img/icon/long-arrow-right--red.png" alt=""></a>
-        </div>
-      </div>
-    </div>
-  </div>
   <div class="site-footer__copyright row">
     <p>© Copyright <span class="js-year">2016</span> Secret Escapes</p>
     <div class="site-footer__terms">

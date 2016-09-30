@@ -1,11 +1,67 @@
 ---
-layout:     layout
+layout:     default
 title:      Travel
 class:      travel
-nav-order:  5
+nav-order:  7
 intro:      >
             Your holiday shouldn’t start when you arrive at your hotel, it should begin when you check-in at the airport. Getting around Switzerland is part of your adventure. A train journey through the Alps is definitely one for the bucket list and the views will make your jaw drop. And don’t forget to make the most of the cable cars. They’re every single bit as fun as they look.
 ---
 
+
+
+<section class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
+
+  <div class="banner__wrap row row--padding">
+    <h1 class="banner__title">{{ page.title }}</h1>
+  </div>
+
+  <div class="banner__description">
+    <div class="row row--padding align-center">
+      <p class="lead-paragraph">{{ page.intro }}</p>
+    </div>
+  </div>
+
+</section>
+
+
+
+  <div class="page-section section--padding" style="background-image: url('{{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}-bg.jpg');">
+    <div class="row--wide row--columns-6-6-gutters">
+
+      <div class="section__image row__column">
+        <div
+          class="bg-image-ratio bg-image-ratio--21-9"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}1.jpg);">
+        </div>
+
+        <div class="row--columns-6-6">
+          <div
+            class="row__column bg-image-ratio bg-image-ratio--16-9"
+            style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}2.jpg);">
+          </div>
+          <div
+            class="row__column bg-image-ratio bg-image-ratio--16-9"
+            style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}3.jpg);">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section__content row__column row--padding">
+        <p class="lead-paragraph">Switzerland is so easy to reach by air that you’ll find yourself planning your return trip before you’ve even landed.</p>
+        <p>The busiest airports are in Zurich and Geneva, where all of the action is. SWISS offer 170 weekly flights and they aim to make your journey as enjoyable as the rest of your trip.</p>
+        <p>SWISS are so excited to welcome Secret Escapes members to Switzerland that they’re offering £25 off SWISS flights. Make sure you’re of the first 1000 members to book your flight and use code SWISSESCAPE16 on SWISS.COM to make your saving and start your SWISS adventure.</p>
+        <a class="btn btn--large" href="https://www.swiss.com/gb/EN/book/flight">Book now</a>
+      </div>
+
+    </div>
+  </div>
+
+
+
+{% include swiss-promo.html %}
+
+
+{% include offer-section.html %}
 
 

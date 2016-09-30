@@ -10,7 +10,7 @@
   background-color: $light-grey;
   text-align: justify;
   @include bp( large ){
-    padding-top: 1em;
+    padding-top: 3em;
   }
   &__padding {
     padding-top: 6em;

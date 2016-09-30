@@ -1,0 +1,145 @@
+---
+layout: default
+---
+
+
+<div class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
+  <div class="banner__wrap">
+    <div class="row row--padding">
+      <h1 class="banner__title">{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="banner__description banner__description--resort">
+    <div class="row">
+      <div class="resort-data">
+        <div class="resort-data--item resort-data--label">Current Conditions</div>
+        <div id="temperature" class="resort-data--item"></div>
+        <div id="currently" class="resort-data--item"></div>
+        <div class="resort-data--item"><a href="#" class="js-launch-modal">View live webcam</a></div>
+      </div>
+    </div>
+    <div class="row row--padding align-center">
+      <p class="lead-paragraph">{{ page.intro }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="three-sixty" style="background-image: url('{{site.baseurl}}/img/verbier/threesixty-bg.jpg');">
+
+  <div class="three-sixty-content js-three-sixty-content">
+
+    <div class="row three-sixty-content__thumbnail js-three-sixty-thumbnail">
+      <div class="three-sixty-content__thumbnail-content">
+
+        <div class="three-sixty-content__thumbnail-content">
+          <div class="three-sixty-content__title-wrap row row--padding">
+            <img class="js-svg-swap three-sixty-content__icon" src="/swiss/img/icon/three-sixty.png" alt="360 image icon">
+            <h3 class="three-sixty-content__title">
+              <span class="three-sixty-content__subtitle">See The Sights At</span> Lauterbrunnen
+            </h3>
+          </div>
+          <div class="three-sixty-content__links row row--padding">
+            <a id="three-sixty-image-hike" class="js-three-sixty-image row__column btn btn--red-trans" href="/swiss/three-sixty/hike">See 360 Image</a>
+            <a id="three-sixty-video-hike" class="js-three-sixty-video row__column btn btn--red-trans" href="http://www.airpano.ru/files/Zermatt-Matterhorn-Monte-Cervino/2-3-2">Play 360 Video</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="three-sixty-content__iframe-wrap js-three-sixty-iframe-wrap">
+      <iframe class="three-sixty-content__iframe js-three-sixty-iframe" src="http://www.airpano.ru/files/Zermatt-Matterhorn-Monte-Cervino/2-3-2" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+{% for section in page.sections %}
+
+  <div class="page-section {% cycle '', 'page-section--odd' %} section--padding" style="background-image: url('{{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}-{{section.class}}-bg.jpg');">
+    <div class="row--wide row--columns-6-6-gutters">
+
+      <div class="section__image row__column">
+        <div
+          class="bg-image-ratio bg-image-ratio--21-9"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}-{{section.class}}1.jpg);">
+        </div>
+
+        <div class="row--columns-6-6">
+          <div
+            class="row__column bg-image-ratio bg-image-ratio--16-9"
+            style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}-{{section.class}}2.jpg);">
+          </div>
+          <div
+            class="row__column bg-image-ratio bg-image-ratio--16-9"
+            style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}-{{section.class}}3.jpg);">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section__content row__column row--padding">
+        <h2 class="line-title"><span>{{ section.title }}</span></h2>
+        <p>
+          {{ section.description }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+{% endfor %}
+
+
+{% include swiss-promo.html %}
+
+
+{% include offer-section.html %}
+
+
+
+<script>
+///////////////////////////////////////
+//       Get weather
+///////////////////////////////////////
+
+$(function() {
+  $.simpleWeather({
+    location: '{{ page.weather-code }}',
+    woeid: '',
+    unit: 'c',
+    success: function(weather) {
+      var locTemperature = "<i class='icon-"+weather.code+"'></i>"+weather.temp+"&deg;" +weather.units.temp+" in "+weather.city;
+      var locTomorrow = "<i class='icon-"+weather.forecast[1].code+"'></i>Tomorrow's forecast is "+weather.forecast[1].high+"&deg;"+weather.units.temp;
+
+      $("#temperature").html(locTemperature);
+      $("#currently").html(locTomorrow);
+      $(".resort-data").addClass('resort-data--ready');
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+});
+</script>
+
+
+
+<!-- Video modal -->
+<div class="js-modal modal is-closed" style="display: none;">
+  <div class="site-header__offset modal__close-wrapper">
+    <div class="js-modal__close modal__close">
+      <img width="100%" src="../img/icon/close.png" alt="Close">
+    </div>
+  </div>
+  <div class="modal__content row row--padding row--columns-vertical-align is-closed">
+    <div class="js-modal__video modal__video bg-image-ratio--16-9 bg-image-ratio">
+      <iframe id="iframe" width="100%" height="100%"  src="{{ page.webcam }}" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+</div>

@@ -5,12 +5,17 @@
 
 $white:       #fff;
 $black:       #000;
+
+$white-1:    rgba(255,255,255,.1);
+$white-15:    rgba(255,255,255,.15);
 $white-25:    rgba(255,255,255,.25);
 $white-33:    rgba(255,255,255,.33);
 $white-5:     rgba(255,255,255,.5);
 $white-66:    rgba(255,255,255,.66);
 $white-75:    rgba(255,255,255,.75);
 $white-85:    rgba(255,255,255,.85);
+$black-1:    rgba(0,0,0,.1);
+$black-15:    rgba(0,0,0,.15);
 $black-25:    rgba(0,0,0,.25);
 $black-33:    rgba(0,0,0,.33);
 $black-5:     rgba(0,0,0,.5);
@@ -33,6 +38,7 @@ $sw-red-33:   rgba(190,25,2,.33);
 $sw-red-75:    rgba(190,25,2,.75);
 $sw-dark-red: #a31402;
 $sw-blue:     #1390bc;
+$sw-navy:     #001e31;
 
 $sw-darker-grey:  #333333;
 $sw-dark-grey:    #555555;
@@ -60,6 +66,7 @@ $light-grey:  #f2f2f2;
 
 // -------- breakpoints --------
 
+$xxxlarge: 1120px;
 $xxlarge: 970px;
 $xlarge:  850px;
 $large:   650px;
@@ -67,6 +74,9 @@ $medium:  450px;
 $small:   330px;
 
 @mixin bp($width){
+  @if $width == xxxlarge {
+    @media (min-width:$xxxlarge) {@content;}
+  }
   @if $width == xxlarge {
     @media (min-width:$xxlarge) {@content;}
   }

@@ -1,13 +1,30 @@
 
-- title: 5* exceptional Jersey break
-  order: 5
-  class: longueville-manor
-  replenish: true
-  replenish-position: 1
-  rebalance: true
-  rebalance-position: 2
-  location: Longueville Manor, St Saviour, Jersey, Channel Islands
-  description: A magnificent Relais & Châteaux retreat - breakfast, one dinner, flights and car hire included
+- title: An exceptional offer
+  order: 1
+  class: offer
+  location: Hotel, City, Switzerland
+  description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
   price: 289
+  was-price: 329
+  price-description: per person for 3 nights
+  link: https://www.secretescapes.com/5-star-exceptional-jersey-break-longueville-manor-st-saviour/sale?utm_source=Microsite&utm_campaign=Jersey%20September%202016
+
+- title: Another offer
+  order: 2
+  class: offer
+  location: Hotel, City, Switzerland
+  description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
+  price: 289
+  was-price: 329
+  price-description: per person for 3 nights
+  link: https://www.secretescapes.com/5-star-exceptional-jersey-break-longueville-manor-st-saviour/sale?utm_source=Microsite&utm_campaign=Jersey%20September%202016
+
+- title: A third great offer
+  order: 3
+  class: offer
+  location: Hotel, City, Switzerland
+  description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
+  price: 289
+  was-price: 329
   price-description: per person for 3 nights
   link: https://www.secretescapes.com/5-star-exceptional-jersey-break-longueville-manor-st-saviour/sale?utm_source=Microsite&utm_campaign=Jersey%20September%202016

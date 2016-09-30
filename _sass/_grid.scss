@@ -15,14 +15,7 @@ $margin: 2em;
 
 // -------- grid sections --------
 
-// .section--padding {
-//   padding-top: 5.063em;
-//   padding-bottom: 5.063em;
-//   @include bp( large ) {
-//     padding-top: 6.192em;
-//     padding-bottom: 6.192em;
-//   }
-// }
+
 
 .section--padding-top {
   padding-top: 3em;
@@ -31,7 +24,6 @@ $margin: 2em;
   }
 }
 
-// not sure if this is actually used?
 .section--padding {
   padding-top: 6em;
   padding-bottom: 6em;
@@ -41,6 +33,7 @@ $margin: 2em;
   @include container( $xxlarge );
   position: relative;
   & + .row { margin-top: $margin; }
+  &--wide { @include container( $xxxlarge ); }
 }
 
 .row--padding {
@@ -182,6 +175,13 @@ $margin: 2em;
   .row--columns-vertical-align {
     display: flex;
     align-items: center;
+  }
+
+  // vertical align floated columns
+  .row--columns-table-vertical-align {
+    display: table;
+    vertical-align: middle;
+    .row__column { display: table-cell; vertical-align: middle; height: 100%; }
   }
 
 }
