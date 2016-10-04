@@ -5,12 +5,12 @@
   position: relative;
   padding-bottom: 4em;
   text-align: center;
-  color: $sw-dark-grey;
+  color: $white;
   letter-spacing: .033em;
-  background-color: $light-grey;
+  background-color: $sw-red;
   text-align: justify;
   @include bp( large ){
-    padding-top: 3em;
+    padding-top: 2em;
   }
   &__padding {
     padding-top: 6em;
@@ -51,7 +51,7 @@
   &__copyright {
     font-size: .833em;
     padding-bottom: .694em;
-    color: $sw-darker-beige;
+    color: $white;
     text-align: center;
   }
   &__terms {
@@ -82,7 +82,7 @@
       height: 44px;
       margin-left: 1em;
       margin-bottom: -12px;
-      background-color: $white;
+      background-color: $sw-dark-red;
       background-image: url("../img/icon/back-to-top.png");
       background-repeat: no-repeat;
       background-position: center;

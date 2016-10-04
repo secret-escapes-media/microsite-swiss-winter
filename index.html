@@ -12,7 +12,9 @@ intro:      >
 <section class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
 
   <div class="banner__wrap row row--padding">
-    <h1 class="banner__title">{{ page.title }}</h1>
+    <h1>
+      <img class="js-svg-swap banner__title-image" src="{{ site.baseurl }}/img/content/title.png" alt="{{ page.title }}">
+    </h1>
   </div>
 
   <div class="banner__description">
@@ -33,10 +35,10 @@ intro:      >
     </div>
     <div class="row__column column-overlap__image">
       <div class="img-block">
-        <div class="img-block__major bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/sunny-city.jpg');"></div>
+        <div class="img-block__major bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/why-1.jpg');"></div>
         <div class="img-block__minor">
-          <div class="img-block__image bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/cycle-to-mountain.jpg');"></div>
-          <div class="img-block__image bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/cabins.jpg');"></div>
+          <div class="img-block__image bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/why-2.jpg');"></div>
+          <div class="img-block__image bg-image-ratio bg-image-ratio--3-2" style="background-image: url('{{site.baseurl}}/img/content/why-3.jpg');"></div>
         </div>
       </div>
     </div>
@@ -46,23 +48,23 @@ intro:      >
 <section class="section--padding-top overview-nav overlap--large">
   <div class="row row--padding">
     <!-- gets all content sections -->
-    {% assign resorts = site.pages | sort:"nav-order" %}
-    {% for resort in resorts %}
-    {% if resort.layout == 'resort' %}
-      <div class="overview-nav__item row__column overlap__image" style="background-image: url('{{site.baseurl}}/img/bg/bg-{{resort.class}}.jpg');">
-        <a class="overview-nav__link" href="{{site.baseurl}}{{ resort.url }}">
-          <span class="overview-nav__wrap">{{resort.title}}</span>
+    {% assign largenav = site.pages | sort:"nav-order" %}
+    {% for item in largenav %}
+    {% if item.home-link %}
+      <div class="overview-nav__item row__column overlap__image" style="background-image: url('{{site.baseurl}}/img/bg/bg-{{item.class}}.jpg');">
+        <a class="overview-nav__link" href="{{site.baseurl}}{{ item.url }}">
+          <span class="overview-nav__wrap">{{item.title}}</span>
         </a>
       </div>
-      {% endif %}
+    {% endif %}
     {% endfor %}
+
   </div>
 </section>
 
 
+{% include offer-section.html %}
+
 
 {% include swiss-promo.html %}
-
-
-{% include offer-section.html %}
 

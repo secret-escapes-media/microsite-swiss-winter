@@ -156,6 +156,10 @@ $transition-time: .25s;
     clear: both;
   }
 }
+.clearfix {
+  @include clearfix();
+}
+
 
 
 // -------- accessible hiding --------
@@ -188,6 +192,7 @@ $z-background-lower:  -2;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+  display: block;
   &:before {
     display: block;
     content: "";

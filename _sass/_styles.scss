@@ -24,6 +24,10 @@
     font-weight: 300;
     letter-spacing: .25em;
     text-shadow: 0px 0px 25px $sw-navy;
+    &-image {
+      max-width: 80%;
+      margin: auto;
+    }
     @include bp( small ){
       .text-title {
         position: absolute;
@@ -191,13 +195,13 @@
   background-size: cover; background-repeat: no-repeat; background-position: center;
   padding-top: 0em; padding-bottom: 0em;
   @include bp( large ){
-    padding-top: 8em; padding-bottom: 8em;
+    padding-top: 6em; padding-bottom: 6em;
   }
   .section__image {
     display: none;
     @include bp( large ){
       display: block;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2); 
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
     }
   }
   .section__content { padding-top: 2em; padding-bottom: 2em; }
@@ -259,24 +263,51 @@
 
 .swiss-promo {
   background-color: $sw-light-beige;
-  background-image: url("../img/bg/swiss-promo-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  @include border-bottom;
-  @include box-shadow;
-  .row__column {
-    margin: 2.986em 2.2em;
-    @include bp( large ){
-      width: 48%;
-    }
-  }
   h3 {
     line-height: 1.33;
   }
-  @include bp(large){
-    background-image: url("../img/bg/swiss-promo.jpg");
+}
+
+
+
+.tab-area {
+  margin-top: 3em;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.15);
+
+  &__nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+      @include border-bottom();
+    }
+    a {
+      padding: 0.7em 2em 0.5em;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.85em;
+      font-weight: 600;
+      &:hover { text-decoration: none; }
+    }
+    &--active {
+      background-color: $sw-red;
+      color: white;
+    }
   }
+
+  &__tabs {}
+  &__tab {
+    overflow: hidden; 
+    &-content {
+      margin-bottom: 2em;
+      overflow: hidden;
+    }
+  }
+
 }
 
 

@@ -2,8 +2,10 @@
 
 
 .three-sixty {
-
+  background-position: center;
+  background-size: cover;
   &-content {
+    height: 360px;
     color: $white;
     text-align: center;
     background-size: cover;
@@ -102,28 +104,6 @@
           margin-right: .75%;
         }
       }
-    }
-    &__iframe-wrap {
-      position: relative;
-      height: 0;
-      max-width: 100%;
-      @include bp( large ){
-        padding-bottom: 42.8571429%;
-      }
-    }
-    &__iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: $z-content;
-      width: 100%;
-      height: 100%;
-    }
-    &.is-playing &__iframe-wrap {
-      padding-bottom: 42.8571429%;
-    }
-    &:hover &__bg {
-      transform: scale(1.1,1.1);
     }
   }
 }
