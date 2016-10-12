@@ -24,6 +24,7 @@ layout: default
     </div>
     <div class="row row--padding align-center">
       <p class="lead-paragraph">{{ page.intro }}</p>
+      <a href="http://secretescap.es/299Z2O2" class="btn btn--red">Book now</a>
     </div>
   </div>
 </div>
@@ -61,15 +62,16 @@ layout: default
 
 {% for section in page.sections %}
 
-  <div class="page-section {% cycle '', 'page-section--odd' %} section--padding" style="background-image: url('{{site.baseurl}}/img/{{ page.class }}/section-{{section.class}}-bg.jpg');">
+  <div class="page-section page-section--padding {% cycle '', 'page-section--odd' %} section--padding" style="background-image: url('{{site.baseurl}}/img/{{ page.class }}/section-{{section.class}}-bg.jpg');">
     <div class="row--wide row--columns-6-6-gutters">
 
       <div class="section__image row__column">
+
+        {% if section.images == 3 %}
         <div
           class="bg-image-ratio bg-image-ratio--21-9"
           style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{section.class}}1.jpg);">
         </div>
-
         <div class="row--columns-6-6">
           <div
             class="row__column bg-image-ratio bg-image-ratio--16-9"
@@ -80,6 +82,12 @@ layout: default
             style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{section.class}}3.jpg);">
           </div>
         </div>
+        {% else %}
+        <div
+          class="bg-image-ratio bg-image-ratio--4-3"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{section.class}}1.jpg);">
+        </div>
+        {% endif  %}
 
       </div>
 
@@ -94,6 +102,10 @@ layout: default
   </div>
 
 {% endfor %}
+
+
+<div class="section--padding-top"></div>
+{% include competition-section.html %}
 
 
 {% include offer-section.html %}

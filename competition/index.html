@@ -12,12 +12,13 @@ intro:      >
 <section class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
 
   <div class="banner__wrap row row--padding">
-    <h1 class="banner__title">{{ page.title }}</h1>
+    <h1 class="banner__title">Win a dream SWISS escape</h1>
   </div>
 
   <div class="banner__description">
     <div class="row row--padding align-center">
-      <p class="lead-paragraph">{{ page.intro }}</p>
+      <p class="lead-paragraph">One very lucky Secret Escapes member will win a brilliant luxury escape and get the opportunity to visit some of the incredible places we’ve featured and maybe even find a few hidden gems of their own.
+</p>
     </div>
   </div>
 
@@ -25,30 +26,108 @@ intro:      >
 
 
 
-<div class="offers row row--padding align-center">
-  <div class="section--padding-top">
-    <h2 class="line-title">
-      <span>
-        Resort Offers
-      </span>
-    </h2>
-    <p class="lead-paragraph">Kick-start your Swiss summer break with this incredible offer. And we’re giving you an extra £25 off, so there’s really no excuse not to start packing.</p>
+
+<div class="section--padding-top ">
+  <div class="row align-center">
+    <h2 class="line-title"><span>Win an incredible SWISS prize package!</span></h2>
+    <p class="lead-paragraph">Donec id elit non mi porta gravida at eget metus. Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue.</p>
+    <a class="btn" href="#">Enter now</a>
   </div>
-  <div class="section--padding-top">
-    <!-- shows offers in page category -->
-    {% assign offers = site.data.offers | sort: 'price' %}
-    {% for offer in offers %}
-      {% include offer-block.html %}
-    {% endfor %}
+</div>
+
+
+
+<div class="page-section section--padding">
+  <div class="row row--columns-6-6-gutters">
+    <div class="section__image row__column">
+      <div
+        class="bg-image-ratio bg-image-ratio--21-9"
+        style="background-image: url({{site.baseurl}}/img/{{ page.class }}/prize-swiss1.jpg);">
+      </div>
+      <div class="row--columns-6-6">
+        <div
+          class="row__column bg-image-ratio bg-image-ratio--16-9"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/prize-swiss2.jpg);">
+        </div>
+        <div
+          class="row__column bg-image-ratio bg-image-ratio--16-9"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/prize-swiss3.jpg);">
+        </div>
+      </div>
+    </div>
+
+    <div class="section__content row__column row--padding">
+      <h3>Travel in comfort and land feeling refreshed.</h3>
+      <p class="lead-paragraph">Sit back, relax, and enjoy our SWISS service and the selected products on board. </p>
+      <a class="btn btn--large" href="#">Enter now</a>
+    </div>
+  </div>
+</div>
+
+<div class="page-section page-section--odd section--padding-bottom">
+
+  <div class="row row--columns-6-6-gutters">
+    <div class="section__image row__column">
+      <div
+        class="bg-image-ratio bg-image-ratio--21-9"
+        style="background-image: url({{site.baseurl}}/img/{{ page.class }}/prize-chalet1.jpg);">
+      </div>
+      <div class="row--columns-6-6">
+        <div
+          class="row__column bg-image-ratio bg-image-ratio--16-9"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/prize-chalet2.jpg);">
+        </div>
+        <div
+          class="row__column bg-image-ratio bg-image-ratio--16-9"
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/prize-chalet3.jpg);">
+        </div>
+      </div>
+    </div>
+
+    <div class="section__content row__column row--padding">
+      <h3>Enjoy your stay in a beautiful Swiss chalet</h3>
+      <p class="lead-paragraph">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus.</p>
+      <p>Theisi erat porttitor ligula, eget lacinia odio sem nec elit. </p>
+      <a class="btn btn--large" href="#">Enter now</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="page-section section--padding bg-color">
+  <div class="row row--columns-4-4-4 row--columns-4-4-4-gutters">
+
+    <div class="row__column">
+      <h4>Title</h4>
+      <p>Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="row__column">
+      <h4>Title</h4>
+      <p>Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+    <div class="row__column">
+      <h4>Title</h4>
+      <p>Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="page-section section--padding-top align-center">
+  <div class="row">
+
+    <h2 class="line-title"><span>Enter below to be in to win!</span></h2>
+
   </div>
 </div>
 
 
 
 {% include swiss-promo.html %}
-
-
-{% include offers-section.html %}
 
 
 

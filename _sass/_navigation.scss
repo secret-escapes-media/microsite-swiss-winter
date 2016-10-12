@@ -14,7 +14,7 @@ header {
   color: $white;
   font-family: $core-font-family;
   background-color: $black-75;
-  padding: 1.15em 0;
+  padding: 1.25em 0;
   height: 70px;
   overflow: hidden;
   text-align: center;
@@ -35,7 +35,7 @@ header {
   }
 
   img {
-    width: 220px;
+    width: 190px;
     @include bp( xlarge ) {
       width: 175px;
     }

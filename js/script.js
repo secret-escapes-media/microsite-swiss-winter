@@ -90,40 +90,55 @@
 //      Modal
 ///////////////////////////////////////
 
-  var modal         = $('.js-modal'),
-      modalContent  = $('.js-modal__content'),
-      modalClose    = $('.js-modal__close');
+var modal         = $('.js-modal'),
+    modalClose    = $('.js-modal__close');
 
-  // EVENT - launch modal & populate with content
-  $('.js-launch-modal').on('click', function(e) {
+// EVENT - launch modal & populate with content
+$('.js-launch-modal').on('click', function(e) {
+  e.preventDefault();
+  // launch modal
+  modal.removeClass('is-closed').addClass('is-open').fadeIn();
+  $('body').css('overflow', 'hidden');
+});
 
-    e.preventDefault();
+function closeModal() {
+  modal.removeClass('is-open').addClass('is-closed').fadeOut();
+  $('body').css('overflow', 'auto');
+}
 
-    // launch modal
-    modal.removeClass('is-closed').addClass('is-open').fadeIn();
-    $('body').css('overflow', 'hidden');
-
-  });
-
-
-  function closeModal(e) {
-    e.on('click', function() {
-      modal.removeClass('is-open').addClass('is-closed').fadeOut();
-      $('body').css('overflow', 'auto');
-    });
+// close button click
+modalClose.click(function(){ closeModal(); } );
+// escape key to close
+$(document).keyup(function(e) {
+   if (e.keyCode == 27) { // escape key maps to keycode `27`
+     closeModal();
+    }
+});
+// closes modal on background click
+modal.on('click', function(e) {
+  if (e.target !== this){
+    return;
   }
+  closeModal();
+});
 
-  $(document).keyup(function(e) {
-     if (e.keyCode == 27) { // escape key maps to keycode `27`
-       modal.removeClass('is-open').addClass('is-closed').fadeOut();
-       $('body').css('overflow', 'auto');
-      }
-  });
 
-  // close modal on icon and bg click
-  closeModal(modalClose);
-  // closeModal(modal);
 
+///////////////////////////////////////
+//      Tabs
+///////////////////////////////////////
+
+$('.tab-area__nav-item').click(function(){
+  event.preventDefault();
+  var tab = $(this).attr("data-tab");
+
+  $('.tab-area__nav').find('.tab-area__nav-item--active').removeClass('tab-area__nav-item--active');
+  $(this).addClass('tab-area__nav-item--active');
+
+  $('.tab-area__tabs').find('.tab-area__tab--active').removeClass('tab-area__tab--active');
+  $('#' + tab ).addClass('tab-area__tab--active');
+
+});
 
 
 ///////////////////////////////////////////////////////////////////////////////

@@ -7,11 +7,9 @@
   text-align: center;
   color: $white;
   letter-spacing: .033em;
-  background-color: $sw-red;
+  background-color: $sw-dark-red;
   text-align: justify;
-  @include bp( large ){
-    padding-top: 2em;
-  }
+  padding-top: 2em;
   &__padding {
     padding-top: 6em;
   }

@@ -74,7 +74,6 @@ h3, .h3,
 h4, .h4,
 h5, .h5 {
   font-weight: 400;
-  text-transform: capitalize;
 }
 
 .non-cap,
@@ -114,7 +113,7 @@ h3, .h3 {
 
 h4, .h4 { font-size: 1.44em; }
 
-h5, .h5 { font-size: 1.2em; }
+h5, .h5 { font-size: 1.2em; font-weight: 600; }
 
 
 // -------- general content styles --------
@@ -159,6 +158,10 @@ h5, .h5 { font-size: 1.2em; }
     line-height: 1.44;
   }
 
+  hr { border: 0; margin-top: 1em; margin-bottom: 1em; height: 1px; background-color: white; }
+  .align-center hr,
+  hr.align-center { margin-left: auto; margin-right: auto; width: 80px; }
+
 }
 
 
@@ -170,7 +173,6 @@ h5, .h5 { font-size: 1.2em; }
 .btn {
   @include transition;
   display: inline-block;
-  width: 100%;
   padding: .5em 1.5em;
   border: 1px solid $sw-red;
   font-weight: 400;
@@ -181,6 +183,9 @@ h5, .h5 { font-size: 1.2em; }
     color: white;
     background-color: $sw-red;
     text-decoration: none;
+  }
+  &--large {
+    width: 100%;
   }
   &--red {
     background-color: $sw-red;

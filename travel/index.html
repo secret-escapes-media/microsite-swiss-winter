@@ -19,6 +19,9 @@ intro: >
   <div class="banner__description">
     <div class="row row--padding align-center">
       <p class="lead-paragraph">{{ page.intro }}</p>
+      <hr>
+      <h5>SWISS flights from £55 one-way*</h5>
+      <a href="" class="btn btn--red">Book now</a>
     </div>
   </div>
 
@@ -39,16 +42,16 @@ intro: >
     <div class="section__image row__column">
       <div
         class="bg-image-ratio bg-image-ratio--21-9"
-        style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}1.jpg);">
+        style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-zurich1.jpg);">
       </div>
       <div class="row--columns-6-6">
         <div
           class="row__column bg-image-ratio bg-image-ratio--16-9"
-          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}2.jpg);">
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-zurich2.jpg);">
         </div>
         <div
           class="row__column bg-image-ratio bg-image-ratio--16-9"
-          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}3.jpg);">
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-zurich3.jpg);">
         </div>
       </div>
     </div>
@@ -65,27 +68,27 @@ intro: >
 
 
 
-<div class="page-section page-section--odd section--padding">
+<div class="page-section page-section--padding page-section--odd section--padding">
   <div class="row row--columns-6-6-gutters">
     <div class="section__image row__column">
       <div
         class="bg-image-ratio bg-image-ratio--21-9"
-        style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}1.jpg);">
+        style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-geneva1.jpg);">
       </div>
       <div class="row--columns-6-6">
         <div
           class="row__column bg-image-ratio bg-image-ratio--16-9"
-          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}2.jpg);">
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-geneva2.jpg);">
         </div>
         <div
           class="row__column bg-image-ratio bg-image-ratio--16-9"
-          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/section-{{ page.class }}3.jpg);">
+          style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-geneva3.jpg);">
         </div>
       </div>
     </div>
 
     <div class="section__content row__column row--padding">
-      <h3>Zurich Lounge</h3>
+      <h3>Geneva Lounge</h3>
       <p class="lead-paragraph">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus.</p>
       <p>Theisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
       <a class="btn btn--large" href="#">Find out more</a>
@@ -103,80 +106,63 @@ intro: >
     <div class="row__column offer__details">
       <h3>Ski Equipment Flies For Free</h3>
       <p>Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce dapibus, tellus ac cursus commodo.</p>
-      <a href="#" class="btn">Find out more</a>
+      <a href="https://www.swiss.com/ireland/en/swiss-the-skiers-airline.html" class="btn btn--large">Find out more</a>
     </div>
   </div>
 </div>
 
 
 
-<div class="page-section">
-  <div class="row">
+{% assign flight_classes = site.data.flight-classes.classes | sort: 'price' %}
+<div class="page-section page-section--padding" style="background-image: url('{{site.baseurl}}/img/{{ page.class }}/section-flightclasses-bg.jpg');">
+  <div class="row row--padding">
+
     <h2 class="line-title"><span>Taking off</span></h2>
-  </div>
 
+    <div class="tab-area">
 
+      <!-- TAB NAV
+      =====================-->
+      <ul class="tab-area__nav clearfix row--columns-4-4-4">
+      {% for flight_class in flight_classes %}
+        <li class="row__column">
+          <a href="#" class="tab-area__nav-item {% if forloop.first %}tab-area__nav-item--active{% endif %}" data-tab="tab-{{ flight_class.class }}">{{ flight_class.title }}</a>
+        </li>
+      {% endfor %}
+      </ul>
 
-  <div class="row tab-area">
+      <!-- TABS
+      =====================-->
+      <div class="row tab-area__tabs">
 
-    <ul class="tab-area__nav clearfix row--columns-4-4-4">
-      <li class="row__column tab-area__nav--active">
-        <a href="#">First</a>
-      </li>
-      <li class="row__column">
-        <a href="#">Business</a>
-      </li>
-      <li class="row__column">
-        <a href="#">Economy</a>
-      </li>
-    </ul>
+        {% for flight_class in flight_classes %}
+        <div id="tab-{{ flight_class.class }}" class="tab-area__tab {% if forloop.first %}tab-area__tab--active{% endif %}">
 
-    <div class="row tab-area__tabs">
+          <a href="#" class="tab-area__tab-content bg-image-ratio bg-image-ratio--21-9" style="background-image: url({{site.baseurl}}/img/{{ page.class }}/swiss-{{ flight_class.class }}-main.jpg);" alt="{{ flight_class.title }}">
+          </a>
 
-      <div class="tab-area__tab">
-
-        <a href="#" class="tab-area__tab-content bg-image-ratio bg-image-ratio--21-9" style="background-image: url({{site.baseurl}}/img/content/swiss-first-main.jpg);" alt="First">
-        </a>
-
-        <div class="tab-area__tab-content row--padding align-center">
-          <p class="lead-paragraph">Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-        </div>
-
-        <div class="tab-area__tab-content row--padding row--columns-4-4-4 row--columns-4-4-4-gutters">
-
-          <div class="row__column">
-            <h4>Food and Drink</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <div class="tab-area__tab-content row--padding align-center">
+            <p class="lead-paragraph">{{ flight_class.introduction }}</p>
           </div>
 
-          <div class="row__column">
-            <h4>Food and Drink</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <div class="tab-area__tab-content row--padding row--columns-4-4-4 row--columns-4-4-4-gutters">
+            <div class="row__column">{{ flight_class.col1 }}</div>
+            <div class="row__column">{{ flight_class.col2 }}</div>
+            <div class="row__column">{{ flight_class.col3 }}</div>
           </div>
-
-          <div class="row__column">
-            <h4>Food and Drink</h4>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+          <div class="tab-area__tab-content row--padding">
+            <a href="{{ flight_class.link }}" class="btn btn--large">Book now</a>
           </div>
 
         </div>
-        <div class="tab-area__tab-content row--padding">
-          <a href="#" class="btn">Book now</a>
-        </div>
-
+        {% endfor %}
       </div>
 
-      <div class="tab-area__tab" style="display: none;">
-
-      </div>
-
-      <div class="tab-area__tab" style="display: none;">
-
-      </div>
-    </div>
+    </div><!-- end tab-area -->
 
   </div>
 </div>
 
 
+{% include competition-section.html %}
 

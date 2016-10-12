@@ -1,0 +1,29 @@
+title: Taking Off
+classes:
+
+  - title: First
+    order: 1
+    class: first
+    link: https://www.swiss.com/gb/EN/fly/on-board/swiss-first
+    introduction: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
+    col1: <h4>Food and Drink</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+    col2: <h4>Entertainment</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+    col3: <h4>Comfort</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+
+  - title: Business
+    order: 1
+    class: business
+    link: https://www.swiss.com/gb/EN/fly/on-board/swiss-business
+    introduction: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
+    col1: <h4>Food and Drink</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+    col2: <h4>Entertainment</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+    col3: <h4>Comfort</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+
+  - title: Economy
+    order: 1
+    class: economy
+    link: https://www.swiss.com/gb/EN/fly/on-board/swiss-economy
+    introduction: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
+    col1: <h4>Food and Drink</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+    col2: <h4>Entertainment</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
+    col3: <h4>Comfort</h4><p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.</p>
