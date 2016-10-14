@@ -142,8 +142,8 @@ $(function() {
     woeid: '',
     unit: 'c',
     success: function(weather) {
-      var locTemperature = "<i class='icon-"+weather.code+"'></i>"+weather.temp+"&deg;" +weather.units.temp+" and "+weather.currently;
-      var locTomorrow = "<i class='icon-"+weather.forecast[1].code+"'></i>Tomorrow's forecast is "+weather.forecast[1].high+"&deg;"+weather.units.temp;
+      var locTemperature = "<i class='icon-"+weather.code+"'></i> Today: "+weather.temp+"&deg;" +weather.units.temp+" and "+weather.currently;
+      var locTomorrow = "<i class='icon-"+weather.forecast[1].code+"'></i>Tomorrow:  "+weather.forecast[1].high+"&deg;"+weather.units.temp+" and "+weather.forecast[1].text;
 
       $("#temperature").html(locTemperature);
       $("#currently").html(locTomorrow);

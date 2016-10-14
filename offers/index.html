@@ -1,0 +1,48 @@
+---
+layout: default
+title: Offers
+class: offers
+nav-order: 6
+home-link: true
+intro: >
+   Grab your skis and take advantage of these fantastic offers brought to you by your Secret Escapes team – plus claim back an extra £25 on your booking. Hit the slopes in no time!
+---
+
+
+
+<section class="banner site-header__offset" style="background-image: url({{site.baseurl}}/img/bg/bg-{{page.class}}.jpg);">
+
+  <div class="banner__wrap row row--padding">
+    <h1 class="banner__title">{{ page.title }}</h1>
+  </div>
+
+  <div class="banner__description">
+    <div class="row row--padding align-center">
+      <p class="lead-paragraph">{{ page.intro }}</p>
+      <hr>
+      <h5>SWISS flights from £55 one-way*</h5>
+      <a href="" class="btn btn--red">Book now</a>
+    </div>
+  </div>
+
+</section>
+
+
+
+<div class="section--padding-top ">
+  <div class="row">
+
+    {% assign offers = site.data.offers %}
+    {% for offer in offers %}
+      {% include offer-block.html %}
+    {% endfor %}
+
+  </div>
+</div>
+
+
+<div class="section--padding-top "></div>
+
+
+{% include competition-section.html %}
+

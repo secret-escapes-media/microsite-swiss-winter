@@ -122,7 +122,7 @@ h5, .h5 { font-size: 1.2em; font-weight: 600; }
   color: $text-black;
   letter-spacing: .033em;
   font-weight: 300;
-  p             { text-align: justify; max-width: $large; }
+  p             { max-width: 720px; }
   p + *         { margin-top: 1em; }
   h1, .h1,
   h2, .h2,
@@ -141,7 +141,7 @@ h5, .h5 { font-size: 1.2em; font-weight: 600; }
   .align-right  { text-align: right; }
   .align-center { text-align: center; }
   .align-center p,
-  p.align-center { text-align: center; margin-left: auto; margin-right: auto; max-width: $large; }
+  p.align-center { text-align: center; margin-left: auto; margin-right: auto; }
 
   .lead-paragraph { font-size: 1.2em; line-height: 1.66 }
 
