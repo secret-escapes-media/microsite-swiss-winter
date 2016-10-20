@@ -122,7 +122,7 @@ intro: >
 
       <!-- TAB NAV
       =====================-->
-      <ul class="tab-area__nav clearfix row--columns-4-4-4">
+      <ul class="tab-area__nav clearfix row--columns-6-6">
       {% for flight_class in flight_classes %}
         <li class="row__column">
           <a href="#" class="tab-area__nav-item {% if forloop.first %}tab-area__nav-item--active{% endif %}" data-tab="tab-{{ flight_class.class }}">{{ flight_class.title }}</a>
@@ -141,14 +141,9 @@ intro: >
           </a>
 
           <div class="tab-area__tab-content row--padding align-center">
-            <p class="lead-paragraph">{{ flight_class.introduction }}</p>
+            {{ flight_class.introduction }}
           </div>
 
-          <div class="tab-area__tab-content row--padding row--columns-4-4-4 row--columns-4-4-4-gutters">
-            <div class="row__column">{{ flight_class.col1 }}</div>
-            <div class="row__column">{{ flight_class.col2 }}</div>
-            <div class="row__column">{{ flight_class.col3 }}</div>
-          </div>
           <div class="tab-area__tab-content row--padding">
             <a href="{{ flight_class.link }}" class="btn btn--large">Book now</a>
           </div>

@@ -1,29 +1,16 @@
 title: Taking Off
 classes:
 
-  - title: First
-    order: 1
-    class: first
-    link: https://ad.doubleclick.net/ddm/trackclk/N9207.1692340SECRETESCAPES.COM/B10463975.139729333;dc_trk_aid=311970487;dc_trk_cid=75295601;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=
-    introduction: For the highest possible level of comfort, travel First Class and land feeling refreshed.
-    col1: <h4>Food and Drink</h4><p>Enjoy the SWISS gourmet menu at your pleasure, accompanied by fine wines for a true restaurant in the clouds experience.</p>
-    col2: <h4>Entertainment</h4><p>From the exclusive SWISS Universe magazine, offered only to First and Business classes, to the inflight entertainment system packed with select films, music and games, you’ll never feel bored on a SWISS flight.</p>
-    col3: <h4>Comfort</h4><p>From privacy walls to designed armchairs that pull out into a bed to maximise your comfort, First Class is certainly a comfortable way to travel.</p>
-
   - title: Business
     order: 1
     class: business
     link: https://ad.doubleclick.net/ddm/trackclk/N9207.1692340SECRETESCAPES.COM/B10463975.139728224;dc_trk_aid=311970487;dc_trk_cid=75295601;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=
-    introduction: Award-winning Business Class service is designed around your comfort and your needs, where functionality meets opulence.
-    col1: <h4>Food and Drink</h4><p>Enjoy SWISS Taste of Switzerland on any outbound flight, an award winning gastronomic concept showcasing interpretations of Swiss culinary tradition that is set to  impress and delight.</p>
-    col2: <h4>Entertainment</h4><p>Enjoy your own personal screen filled with films, music and games, plus the exclusive SWISS Universe magazine, offered only to FIrst and Business class. </p>
-    col3: <h4>Comfort</h4><p>With a great amount of space making this a convenient workplace, plus bed and in-seat massage function, Business Class seats are practical and luxurious. </p>
+    introduction: >
+      <p class="lead-paragraph">Award-winning Business Class service is designed around your comfort and your needs, where functionality meets opulence.</p><p>With extra baggage allowance, access to exclusive lounges and priority boarding, as a Business Class passenger you’ll be on your way in no time. On board you’ll enjoy a range of Swiss specialities, all made from fresh regional ingredients. For extra privacy, your neighbouring seat will remain vacant as you explore a host of quality magazines and newspapers.</p>
 
   - title: Economy
-    order: 1
+    order: 2
     class: economy
     link: https://ad.doubleclick.net/ddm/trackclk/N9207.1692340SECRETESCAPES.COM/B10463975.139728226;dc_trk_aid=311970487;dc_trk_cid=75295601;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=
-    introduction: Economy doesn’t have to mean basic; with great SWISS hospitality, there’s no reason not to feel spoilt.
-    col1: <h4>Food and Drink</h4><p>Included in each ticket price, is a small snack or light meal with produce all from Switzerland to ensure great quality and authenticity.</p>
-    col2: <h4>Entertainment</h4><p>Be in control of your own entertainment with a vast selection of films, TV, music and games to choose from at your leisure.</p>
-    col3: <h4>Comfort</h4><p>Economy still allows for plenty comfort in-flight, and SWISS is determined to ensure a relaxed and pleasant journey.</p>
+    introduction: >
+      <p class="lead-paragraph">Economy doesn’t have to mean basic; with great SWISS hospitality, there’s no reason not to feel spoilt.</p><p>With easy check-in and comfortable seats with plenty of leg-room, there’s nothing to suggest you’re flying Economy. Included in each ticket price, a small snack or light meal with produce from Switzerland ensures great quality and authenticity. Economy still allows for plenty comfort in-flight, and SWISS is determined to ensure a relaxed and pleasant journey.</p>
