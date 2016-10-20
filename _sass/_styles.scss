@@ -83,9 +83,9 @@
           text-align: center;
           flex-grow: 1;
           font-size: 0.9em;
-          font-weight: 600;
+          font-weight: 400;
           line-height: 1;
-          letter-spacing: 0.15em;
+          letter-spacing: 0.05em;
           @include bp( large ){
             margin: 0 2px;
             width: auto;
@@ -96,6 +96,29 @@
           background-color: $sw-navy; color: $white;
           text-transform: uppercase;
         }
+        &--webcam {
+          display: none;
+          @include bp( large ){
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  &--comp {
+    .banner__wrap {
+      padding-top: 4em;
+      padding-bottom: 4em;
+      @include bp( large ){
+        padding-top: 9em;
+        padding-bottom: 9em;
+      }
+    }
+    .banner__title {
+      text-transform: uppercase;
+      font-weight: 400;
+      @include bp( large ){
+        font-size: 3.8em;
       }
     }
   }
@@ -227,6 +250,13 @@
 
 }
 
+.section__image {
+  display: none;
+  @include bp( large ){
+    display: block;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+}
 
 
 /* CUSTOM STYLES FOR THIS SITE
@@ -324,4 +354,8 @@
 
 }
 
-
+/* IFRAMES
+  ========================================= */
+// hide tracking iframes
+iframe { display: none; }
+iframe.visible { display: block; }

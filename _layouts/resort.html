@@ -16,15 +16,15 @@ layout: default
         <div id="temperature" class="resort-data--item"></div>
         <div id="currently" class="resort-data--item"></div>
         {% if page.webcam-link %}
-         <div class="resort-data--item">
-           <a href="#" class="js-launch-modal">View live webcam</a>
+         <div class="resort-data--item resort-data--webcam">
+           <a href="{{ page.webcam-link }}" data-webcam-link="{{ page.webcam-link }}" class="js-launch-modal">View live webcam</a>
          </div>
          {% endif %}
       </div>
     </div>
     <div class="row row--padding align-center">
       <p class="lead-paragraph">{{ page.intro }}</p>
-      <a href="http://secretescap.es/299Z2O2" class="btn btn--red">Book now</a>
+      <a href="{{ page.dc-book-now }}" class="btn btn--red">Book now</a>
     </div>
   </div>
 </div>
@@ -104,15 +104,28 @@ layout: default
 {% endfor %}
 
 
-<div class="section--padding-top"></div>
-{% include competition-section.html %}
-
-
 {% include offer-section.html %}
 
 
-{% include swiss-promo.html %}
+{% include competition-section.html %}
 
+
+<!-- SWISS Promo -->
+<div class="page-section page-section--padding swiss-promo" style="background-image: url({{ site.baseurl }}/img/bg/swiss-promo.jpg);">
+
+  <div class="row row--padding row--columns-6-6">
+    <div class="row__column">
+      <h3>Flying with SWISS</h3>
+      <p>SWISS is set to perfect your Winter wanderlust with warm Swiss hospitality. Make your journey as comfortable as possible, with free ski equipment transport ready to take the load off. Fly to your Swiss adventure from as little as £49 one-way*, and realise your perfect Winter wonderland today. </p>
+      <a href="{{ page.dc-book-now }}" class="btn btn--red">Book now</a>
+    </div>
+  </div>
+
+</div>
+
+
+
+{{ content }}
 
 
 <!-- Video modal -->
@@ -124,7 +137,7 @@ layout: default
   </div>
   <div class="modal__content row row--padding row--columns-vertical-align is-closed">
     <div class="js-modal__video modal__video bg-image-ratio--16-9 bg-image-ratio">
-      <iframe id="iframe" width="100%" height="100%"  src="{{ page.webcam-link }}" allowfullscreen="true"></iframe>
+
     </div>
   </div>
 </div>
@@ -155,4 +168,3 @@ $(function() {
   });
 });
 </script>
-

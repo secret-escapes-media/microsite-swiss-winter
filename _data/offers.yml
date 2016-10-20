@@ -1,30 +1,20 @@
 
-- title: An exceptional offer
+- title: Swiss Alps winter holiday
   order: 1
-  class: offer
-  location: Hotel, City, Switzerland
-  description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
-  price: 289
-  was-price: 329
-  price-description: per person for 3 nights
-  link: #
+  class: swiss-alps-winter-holiday
+  location: Sunstar Alpine Hotel, Wengen, Switzerland
+  description: A stunning seven-night Swiss Alps stay, with half board and travel - 2017 departures
+  price:
+  was-price:
+  price-description: per person for XXX nights
+  link: https://www.secretescapes.com/swiss-alps-winter-holiday-sunstar-alpine-hotel-wengen/sale?utm_source=SE&utm_campaign=swisswinter_20161021&utm_medium=hub_email
 
-- title: Another offer
+- title: Swiss Alps winter break
   order: 2
-  class: offer
-  location: Hotel, City, Switzerland
-  description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
-  price: 289
-  was-price: 329
-  price-description: per person for 3 nights
-  link: #
-
-- title: A third great offer
-  order: 3
-  class: offer
-  location: Hotel, City, Switzerland
-  description: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo.
-  price: 289
-  was-price: 329
-  price-description: per person for 3 nights
-  link: #
+  class: swiss-alps-winter-break
+  location: Hotel Steffani, St. Moritz, Switzerland
+  description: Seven alpine nights in glamorous St Moritz with half board and travel included
+  price:
+  was-price:
+  price-description: per person for XXX nights
+  link: https://www.secretescapes.com/swiss-alps-winter-break-hotel-steffani-st-moritz/sale?utm_source=SE&utm_campaign=swisswinter_20161021&utm_medium=hub_email

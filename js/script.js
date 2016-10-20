@@ -91,19 +91,25 @@
 ///////////////////////////////////////
 
 var modal         = $('.js-modal'),
-    modalClose    = $('.js-modal__close');
+    modalClose    = $('.js-modal__close'),
+    modalVideo    = $('.js-modal__video');
 
 // EVENT - launch modal & populate with content
 $('.js-launch-modal').on('click', function(e) {
   e.preventDefault();
+  var iframeLink = $(this).attr('data-webcam-link');
+
   // launch modal
   modal.removeClass('is-closed').addClass('is-open').fadeIn();
   $('body').css('overflow', 'hidden');
+  modalVideo.append('<iframe class="visible" width="100%" height="100%" src="' + iframeLink + '" frameborder="0" allowfullscreen></iframe>');
+
 });
 
 function closeModal() {
   modal.removeClass('is-open').addClass('is-closed').fadeOut();
   $('body').css('overflow', 'auto');
+  modalVideo.empty();
 }
 
 // close button click
