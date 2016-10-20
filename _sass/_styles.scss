@@ -16,6 +16,12 @@
   &__wrap {
     padding-top: 11em;
     padding-bottom: 11em;
+    padding-left: 0;
+    padding-right: 0;
+    @include bp( large ){
+      padding-left: 2em;
+      padding-right: 2em;
+    }
   }
 
   &__title {
@@ -306,6 +312,10 @@
   background-size: cover;
   h3 {
     line-height: 1.33;
+  }
+  background-image: url(../img/bg/swiss-promo-mobile.jpg);
+  @include bp( large ){
+    background-image: url(../img/bg/swiss-promo.jpg);
   }
 }
 
