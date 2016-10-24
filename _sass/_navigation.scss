@@ -195,7 +195,6 @@ $icon-height: 21px;
 
 .microsite-nav__list {
   height: 100%;
-  position: relative;
   text-align: center;
   white-space: nowrap;
   overflow: scroll;
@@ -220,7 +219,7 @@ $icon-height: 21px;
       z-index: $z-overlay-upper;
       display: block;
       width: 66px;
-      height: auto;
+      height: 45px;
       background-image: url("../img/icon/nav-arrow.png");
       background-position: center;
       background-repeat: no-repeat;

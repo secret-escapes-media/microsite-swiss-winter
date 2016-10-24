@@ -25,9 +25,9 @@
   $('.js-year').html(new Date().getFullYear());
 
   // detects touch device
-  if ("ontouchstart" in document.documentElement){
+  // if ("ontouchstart" in document.documentElement){
     $('html').addClass('touch');
-  }
+  // }
 
 
 ///////////////////////////////////////
