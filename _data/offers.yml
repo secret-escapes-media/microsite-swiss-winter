@@ -4,9 +4,9 @@
   class: swiss-alps-winter-holiday
   location: Sunstar Alpine Hotel, Wengen, Switzerland
   description: A stunning seven-night Swiss Alps stay, with half board and travel - 2017 departures
-  price:
-  was-price:
-  price-description: per person for XXX nights
+  price: 799
+  was-price: 1165
+  price-description: per person for 7 nights
   link: https://www.secretescapes.com/swiss-alps-winter-holiday-sunstar-alpine-hotel-wengen/sale?utm_source=SE&utm_campaign=swisswinter_20161021&utm_medium=hub_email
 
 - title: Swiss Alps winter break
@@ -14,9 +14,9 @@
   class: swiss-alps-winter-break
   location: Hotel Steffani, St. Moritz, Switzerland
   description: Seven alpine nights in glamorous St Moritz with half board and travel included
-  price:
-  was-price:
-  price-description: per person for XXX nights
+  price: 1199
+  was-price: 1539
+  price-description: per person for 7 nights
   link: https://www.secretescapes.com/swiss-alps-winter-break-hotel-steffani-st-moritz/sale?utm_source=SE&utm_campaign=swisswinter_20161021&utm_medium=hub_email
 
 - title: Swiss Alps holiday at a chic chalet-style hotel
@@ -24,8 +24,17 @@
   class: swiss-alps-holiday-at-a-chic-chalet-style-hotel
   location: Ambassador Zermatt, Switzerland
   description: A traditional ski hotel with modern design influences in legendary Zermatt - breakfast included
-  price:
-  was-price:
-  price-description: per person for XXX nights
+  price: 829
+  was-price: 1199
+  price-description: per person for 7 nights
   link: https://www.secretescapes.com/central-zermatt-break-at-a-chic-chalet-style-hotel-ambassador-zermatt-switzerland/sale?utm_source=SE&utm_campaign=swiss_20161021&utm_medium=hub_email
 
+- title: Swiss Alps holiday at a charming family-run hotel
+  order: 4
+  class: swiss-alps-holiday-at-a-charming-family-run-hotel
+  location: Hotel Allalin, Saas-Fee
+  description: A Swiss Alps break at a family-run hotel with sauna and Jacuzzi, plus travel - 2017 departures
+  price: 829
+  was-price: 1019
+  price-description: per person for 7 nights
+  link: https://uat.secretescapes.com/swiss-alps-holiday-at-a-charming-family-run-hotel-hotel-allalin-saas-fee/sale?utm_source=SE&utm_campaign=swiss_20161021&utm_medium=hub_email
