@@ -37,4 +37,24 @@
   price: 829
   was-price: 1019
   price-description: per person for 7 nights
-  link: https://uat.secretescapes.com/swiss-alps-holiday-at-a-charming-family-run-hotel-hotel-allalin-saas-fee/sale?utm_source=SE&utm_campaign=swiss_20161021&utm_medium=hub_email
+  link: https://www.secretescapes.com/swiss-alps-holiday-at-a-charming-family-run-hotel-hotel-allalin-saas-fee/sale?utm_source=SE&utm_campaign=swiss_20161021&utm_medium=hub_email
+
+- title: Ski holiday in an idyllic Swiss mountain village
+  order: 5
+  class: ski-holiday-in-an-idyllic-swiss-mountain-village
+  location: Hotel Schweizerhof Gourmet & Spa, Saas-Fee
+  description: A ski holiday in the pretty Swiss mountains at a charming hotel known for its fine dining
+  price: 849
+  was-price: 1079
+  price-description: per person for 7 nights
+  link: https://www.secretescapes.com/ski-holiday-in-an-idyllic-swiss-mountain-village-hotel-schweizerhof-gourmet-and-spa-saas-fee/sale?utm_source=SE&utm_campaign=swiss_20161021&utm_medium=hub_email
+
+- title: Luxury Switzerland ski holiday in a charming alpine village
+  order: 5
+  class: luxury-switzerland-ski-holiday-in-a-charming-alpine-village
+  location: Waldhotel National, Arosa
+  description: A classic Swiss Alps holiday at an impressive hotel with a superb spa and easy access to the slopes
+  price: 1199
+  was-price: 1439
+  price-description: per person for 7 nights
+  link: https://www.secretescapes.com/luxury-switzerland-ski-holiday-in-a-charming-alpine-village-waldhotel-national-arosa/sale?utm_source=SE&utm_campaign=swiss_20161021&utm_medium=hub_email
