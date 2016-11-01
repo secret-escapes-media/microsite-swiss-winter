@@ -1,24 +1,4 @@
 
-- title: Swiss Alps winter holiday
-  order: 1
-  class: swiss-alps-winter-holiday
-  location: Sunstar Alpine Hotel, Wengen, Switzerland
-  description: A stunning seven-night Swiss Alps stay, with half board and travel - 2017 departures
-  price: 799
-  was-price: 1165
-  price-description: per person for 7 nights
-  link: https://www.secretescapes.com/swiss-alps-winter-holiday-sunstar-alpine-hotel-wengen/sale?utm_source=SE&utm_campaign=swisswinter_20161021&utm_medium=hub_email
-
-- title: Swiss Alps winter break
-  order: 2
-  class: swiss-alps-winter-break
-  location: Hotel Steffani, St. Moritz, Switzerland
-  description: Seven alpine nights in glamorous St Moritz with half board and travel included
-  price: 1199
-  was-price: 1539
-  price-description: per person for 7 nights
-  link: https://www.secretescapes.com/swiss-alps-winter-break-hotel-steffani-st-moritz/sale?utm_source=SE&utm_campaign=swisswinter_20161021&utm_medium=hub_email
-
 - title: Swiss Alps holiday at a chic chalet-style hotel
   order: 3
   class: swiss-alps-holiday-at-a-chic-chalet-style-hotel
